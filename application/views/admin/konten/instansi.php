@@ -57,7 +57,7 @@
                                                         <div class="col-md-12">
                                                             <label for="sel1">Nomer Telp</label>
                                                             <input type="text" name="telp" class="form-control" pattern="[0-9A-Za-z .,-]{0,50}" value="" required="" maxlength="50">
-                                                            <label for="sel1">Logo</label>
+                                                            <label for="sel1">Logo</label></strong>
                                                             <input type="file" name="logo" class="form-control">
                                                             <input type="hidden" name="logo_lama" value="">
                                                         <br>
@@ -72,7 +72,7 @@
                                                         </form>
                                                     </div>
                                                     <div class="modal-footer">
-                                                            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                                                        <!--    <button type="button" class="btn btn-light" data-dismiss="modal">Close</button> -->
                                                     </div>
                                                     </div>
 

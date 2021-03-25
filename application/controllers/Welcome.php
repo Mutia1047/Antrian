@@ -26,4 +26,16 @@ class Welcome extends CI_Controller {
 		$this->data['tampilan'] = 'home';
      	$this->load->view('hubung', $this->data);
 	}
+
+	public function antrian()
+	{
+		$this->data['tampilan'] = 'antrian';
+     	$this->load->view('hubung', $this->data);
+	}
+
+	public function login()
+	{
+		$this->data['tampilan'] = 'login';
+     	$this->load->view('sign/main', $this->data);
+	}
 }

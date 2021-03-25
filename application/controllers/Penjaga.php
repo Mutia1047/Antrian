@@ -5,9 +5,9 @@ class Penjaga extends CI_Controller {
 
    public $data = array('tampilan' => 'Maaf, Data Tidak Ditemukan');
 
-   public function index()
+   public function loket()
    {
-      $this->data['tampilan'] = 'index';
+      $this->data['tampilan'] = 'penjaga';
       $this->load->view('hubung', $this->data);
    }
 

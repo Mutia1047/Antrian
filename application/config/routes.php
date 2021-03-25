@@ -53,10 +53,12 @@ $route['default_controller'] = 'welcome/home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-#$route['login'] = 'page/login';
+$route['login'] = 'welcome/login';
 $route['index'] = 'page/index';
 $route['loket'] = 'page/loket';
 $route['instansi'] = 'page/instansi';
 $route['karyawan'] = 'page/karyawan';
 $route['agenda'] = 'page/agenda';
 $route['teks_jalan'] = 'page/teks_jalan';
+$route['penjaga'] = 'penjaga/loket';
+$route['antrian'] = 'welcome/antrian';

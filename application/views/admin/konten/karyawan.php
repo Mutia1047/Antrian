@@ -67,7 +67,7 @@
                                                             <label for="sel1">Alamat</label>
                                                             <textarea name="alamat" class="form-control"></textarea>
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-12">
                                                             <label for="sel1">Level</label>
 
                                                             <select name="level" class="form-control" required="" onchange="" id="lev">
@@ -99,7 +99,7 @@
                                                         </form>
                                                     </div>
                                                     <div class="modal-footer">
-                                                            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                                                         <!--   <button type="button" class="btn btn-light" data-dismiss="modal">Close</button> -->
                                                     </div>
                                                     </div>
 
@@ -152,7 +152,7 @@
               </select>
             <label for="sel1">Password</label>
               <input type="password" name="password" class="form-control" placeholder="Masukan Password" id="p" onkeyup=>
-            <label for="sel1">Retype Password</label>
+            <label for="sel1">Retype Password</label></strong>
               <input type="password" name="re_password" class="form-control" placeholder="Ketik Ulang Password" id="up" onkeyup=>
               <p id="pesan"></p>
               
@@ -164,7 +164,7 @@
         </form>
       </div>
       <div class="modal-footer">
-            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+         <!--   <button type="button" class="btn btn-light" data-dismiss="modal">Close</button> -->
       </div>
     </div>
 

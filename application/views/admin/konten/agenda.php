@@ -43,7 +43,7 @@
                                                     <!-- Modal content-->
                                                     <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title">Tambah Agenda</h4>
+                                                        <h4 class="modal-title">Edit Agenda</h4>
                                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                     </div>
                                                     <div class="modal-body">
@@ -54,7 +54,7 @@
                                                                 <textarea name="agenda" class="form-control" required="" placeholder="Masukan Nama Agenda"></textarea>
                                                         </div>
                                                         <div class="col-md-12">
-                                                            <label for="sel1">Gambar</label>
+                                                            <label for="sel1">Gambar</label></strong>
                                                             <input type="file" name="media" class="form-control">
                                                             <input type="hidden" name="media_lama" value="">
                                                                 <br>
@@ -64,7 +64,7 @@
                                                         </form>
                                                     </div>
                                                     <div class="modal-footer">
-                                                            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                                                         <!--   <button type="button" class="btn btn-light" data-dismiss="modal">Close</button> -->
                                                     </div>
                                                     </div>
 
@@ -97,7 +97,7 @@
 	              <textarea class="form-control" name="agenda" required="" placeholder="Masukan Nama Agenda"></textarea>
           </div>
           <div class="col-md-12">
-             <label for="sel1">Gambar</label>
+             <label for="sel1">Gambar</label></strong>
               <input type="file" name="media" class="form-control" readonly="">
             	<br>
               <button type="submit" class="btn btn-primary">Simpan</button>
@@ -106,7 +106,7 @@
         </form>
       </div>
       <div class="modal-footer">
-            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+         <!--   <button type="button" class="btn btn-light" data-dismiss="modal">Close</button> -->
       </div>
     </div>
 

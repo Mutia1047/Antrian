@@ -54,7 +54,7 @@
                                                                 <textarea name="text" class="form-control" required="" placeholder="Masukan Text"></textarea>
                                                         </div>
                                                         <div class="col-md-12">
-                                                            <label for="sel1">Gambar</label>
+                                                            <label for="sel1">Gambar</label></strong>
                                                             <input type="file" name="img" class="form-control">
                                                             <input type="hidden" name="img_lama" value="">
                                                                 <br>
@@ -64,7 +64,7 @@
                                                         </form>
                                                     </div>
                                                     <div class="modal-footer">
-                                                            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                                                        <!--    <button type="button" class="btn btn-light" data-dismiss="modal">Close</button> -->
                                                     </div>
                                                     </div>
 
@@ -97,7 +97,7 @@
 	              <textarea class="form-control" name="text" required="" placeholder="Masukan Nama Text Berjalan"></textarea>
           </div>
           <div class="col-md-12">
-             <label for="sel1">Gambar</label>
+             <label for="sel1">Gambar</label></strong>
               <input type="file" name="img" class="form-control" readonly="">
             	<br>
               <button type="submit" class="btn btn-primary">Simpan</button>
@@ -106,7 +106,7 @@
         </form>
       </div>
       <div class="modal-footer">
-            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+         <!--   <button type="button" class="btn btn-light" data-dismiss="modal">Close</button> -->
       </div>
     </div>
 

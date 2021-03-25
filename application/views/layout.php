@@ -17,13 +17,9 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="<?php echo base_url('assets/css/sb-admin-2.css') ?>" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.css'); ?>">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/loket.css'); ?>">
-
-    <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
-	<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js'); ?>"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/loket.css') ?>">
 
 </head>
 
@@ -33,14 +29,14 @@
 	<div class="row">
 		<div class="col-md-2 col-sm-4 col-xs-4">
 			<div id="logo">
-				<img src="" class="img" onclick="window.location=''">
+				<img src="<?php echo base_url('assets/img/logo.png'); ?>" class="img" onclick="window.location=''">
 			</div>
 		</div>
 		<div class="col-md-8">
 			<div class="instansi">
-				<h1 onclick="window.location=''"></h1>
-				<h3 class="hidden-xs">No. Telp 1234567890</h3>
-				<h3 id="alamat" class="hidden-xs">Jl.amanaman</h3>
+				<h1 onclick="window.location=''">BPKAD Kabupaten Way Kanan</h1>
+				<h3 class="hidden-xs">No. Telp (0723)461001</h3>
+				<h3 id="alamat" class="hidden-xs">Jl. Widana Ali Duki No. 02 Komplek Perkantoran Pemda Way Kanan KM 02 Blambangan Umpu</h3>
 			</div>
 		</div>
 	</div>

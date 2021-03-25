@@ -62,7 +62,7 @@
                                                     <!-- Modal content-->
                                                     <div class="modal-content">
                                                     <div class="modal-header">
-                                                        <h4 class="modal-title">>Edit Loket</h4>
+                                                        <h4 class="modal-title">Edit Loket</h4>
                                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                     </div>
                                                     <div class="modal-body">
@@ -70,7 +70,7 @@
                                                         <div class="col-md-12">
                                                             <label for="sel1"><strong>Nama Loket</label>
                                                             <input type="text" name="loket" class="form-control" pattern="[0-9A-Za-z .,-]{0,50}" value="" required="" maxlength="50">
-                                                            <label for="sel1">Status Loket</label>
+                                                            <label for="sel1">Status Loket</label></strong>
                                                             <select name="status" class="form-control">
                                                                 <option value="0" >Kosong</option>
                                                                 <option value="1" >Sedang digunakan</option>
@@ -84,7 +84,7 @@
                                                         </form>
                                                     </div>
                                                     <div class="modal-footer">
-                                                            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                                                        <!--    <button type="button" class="btn btn-light" data-dismiss="modal">Close</button> -->
                                                     </div>
                                                     </div>
 
@@ -115,7 +115,7 @@
           <div class="col-md-12">
             <label for="sel1"><strong>Nama Loket</label>
               <input type="text" name="loket" class="form-control" pattern="[0-9A-Za-z .,-]{0,50}" placeholder="Example: A, B, C OR 1, 2, 3" required="" maxlength="50">
-            <label for="sel1">Status Loket</label>
+            <label for="sel1">Status Loket</label></strong>
               <select name="status" class="form-control">
                 <option value="0">Kosong</option>
                 <option value="1">Sedang digunakan</option>
