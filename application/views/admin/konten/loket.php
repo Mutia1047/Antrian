@@ -114,7 +114,7 @@
         <form method="POST" action="" enctype="multipart/form-data">
           <div class="col-md-12">
             <label for="sel1"><strong>Nama Loket</label>
-              <input type="text" name="loket" class="form-control" pattern="[0-9A-Za-z .,-]{0,50}" placeholder="Example: A, B, C OR 1, 2, 3" required="" maxlength="50">
+              <input type="text" name="loket" class="form-control" pattern="[0-9A-Za-z .,-]{0,50}" placeholder="Contoh: A, B, C atau 1, 2, 3" required="" maxlength="50">
             <label for="sel1">Status Loket</label></strong>
               <select name="status" class="form-control">
                 <option value="0">Kosong</option>

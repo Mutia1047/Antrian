@@ -85,7 +85,7 @@
                                                             </select>
                                                             <label for="sel1">Password</strong></label>
                                                             <input type="password" name="password" class="form-control">
-                                                            <p>*Kosongkan Bila tidak ingin mengganti password</p>
+                                                            <p>*Kosongkan bila tidak ingin mengganti password</p>
                                                             <label for="sel1"><strong>Retype Password</strong></label>
                                                             <input type="password" name="password" class="form-control">
                                                             <input type="hidden" name="password_lama" value="">
