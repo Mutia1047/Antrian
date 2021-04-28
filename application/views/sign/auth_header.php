@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>
-        <?= $title; ?>
+        Login
     </title>
 
     <!-- Custom fonts for this template-->

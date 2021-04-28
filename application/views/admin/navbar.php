@@ -5,11 +5,11 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
                 <div class="sidebar-brand-icon">
-                    <img src="<?php echo base_url('assets/img/Lambang_Kabupaten.png') ?>"/>
+                    <img src="<?php echo $instansi->logo; ?>" />
                 </div>
-                <div class="sidebar-brand-text mx-3">BPKAD Way Kanan</div>
+                <div class="sidebar-brand-text mx-3"><?php echo $instansi->instansi; ?></div>
             </a>
 
             <!-- Divider -->
@@ -55,9 +55,15 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="teks_jalan">
+                <a class="nav-link" href="text_jalan">
                     <i class="fas fa-fw fa-sticky-note"></i>
-                    <span>Teks Jalan</span></a>
+                    <span>Text Jalan</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo site_url('welcome/logout') ?>">
+                    <i class="fas fa-fw fa-sign-out-alt"></i>
+                    <span>Logout</span></a>
             </li>
 
             <!-- Divider -->
@@ -80,9 +86,9 @@
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                <p class="navbar-brand d-flex align-items-center justify-content-center">
-                    Sistem Informasi Antrian Ruang Pelayanan Terpadu
-                </p>
+                    <p class="navbar-brand d-flex align-items-center justify-content-center">
+                        Sistem Informasi Antrian Ruang Pelayanan Terpadu
+                    </p>
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -91,20 +97,12 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Mery Stew</span>
-                                <img class="img-profile rounded-circle"
-                                    src="<?php echo base_url('assets/img/undraw_profile_3.svg') ?>">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Hai, <?php echo $this->session->userdata('nama') ?></span>
+
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="login" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
+
                         </li>
 
                     </ul>
