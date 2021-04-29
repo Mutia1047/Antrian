@@ -8,22 +8,17 @@ class Welcome extends CI_Controller
 		parent::__construct();
 		$this->load->model('M_crud');
 	}
-
-	public $data = array('tampilan' => 'Maaf, Data Tidak Ditemukan');
-
-	public function home()
+	public function index()
 	{
 		$data['instansi'] = $this->M_crud->show('instansi', 'id_instansi DESC')->row();
 		$data['agenda'] = $this->M_crud->slide('0,1');
 		$data['agenda1'] = $this->M_crud->slide('1,10');
 		$data['loket'] = $this->M_crud->show('loket', 'loket ASC')->result();
 		$data['content'] = 'home';
-		$data['tampilan'] = 'home';
 		$data['menu'] = 'menu';
 		$data['text_jalan'] = $this->M_crud->show('text_jalan', 'id_text DESC')->result();
-		$this->load->view('hubung', $data);
+		$this->load->view('layout', $data);
 	}
-
 	public function antrian()
 	{
 		$data['instansi'] = $this->M_crud->show('instansi', 'id_instansi DESC')->row();
@@ -33,21 +28,18 @@ class Welcome extends CI_Controller
 		$where = array('tgl' => date('dmY'));
 		$data['antrian'] = $this->M_crud->get_max_id('transaksi', 'no_antrian', $where);
 		$data['menu'] = 'menu';
-		$data['tampilan'] = 'antrian';
 		$data['text_jalan'] = $this->M_crud->show('text_jalan', 'id_text DESC')->result();
-		$this->load->view('hubung', $data);
+		$this->load->view('layout', $data);
 	}
-
 	public function login()
 	{
 		$data['instansi'] = $this->M_crud->show('instansi', 'id_instansi DESC')->row();
-		$data['tampilan'] = 'login';
 		$data['content'] = 'login';
 		$data['menu'] = 'menu';
-		$this->load->view('sign/main', $data);
+		$data['text_jalan'] = $this->M_crud->show('text_jalan', 'id_text DESC')->result();
+		$this->load->view('layouts/login', $data);
 		$this->session->sess_destroy();
 	}
-
 	public function validasi()
 	{
 		$user = $this->input->post('username');
@@ -67,10 +59,10 @@ class Welcome extends CI_Controller
 					$this->session->set_flashdata("pesan", "<br><div class='alert alert-success'>
 	              		 <p class='text-danger'>Selamat datang <b>" . $this->session->userdata('nama') . "</b></p></div>");
 					if ($this->session->userdata('level') == 'Admin') {
-						redirect('page/');
+						redirect('admin/');
 					} else {
 						$this->M_crud->edit('loket', array('status' => 1), array('id_loket' => $cek->row('id_loket')));
-						redirect('penjaga/loket/');
+						redirect('penjaga/');
 					}
 				}
 			} else {
@@ -91,8 +83,9 @@ class Welcome extends CI_Controller
 			$this->M_crud->edit('loket', array('status' => 0), array('id_loket' => $this->session->userdata('loket')));
 		}
 		$this->session->sess_destroy();
-		redirect('/');
+		redirect('welcome/');
 	}
+
 	public function tambah_antrian($id)
 	{
 		$no_antrian = $id + 1;
@@ -105,15 +98,16 @@ class Welcome extends CI_Controller
 		}
 		redirect('welcome/printini/');
 	}
+
 	public function printini()
 	{
 		$data['instansi'] = $this->M_crud->show('instansi', 'id_instansi DESC')->row();
+		$data['menu'] = 'menu';
 		$data['content'] = 'print';
 		$where = array('tgl' => date('dmY'));
 		$data['antrian'] = $this->M_crud->get_max_id('transaksi', 'no_antrian', $where);
-		$this->load->view('hubung', $data);
+		$this->load->view('layout', $data);
 	}
-
 	public function get_antri()
 	{
 		$id_loket = $this->input->post('id_loket');

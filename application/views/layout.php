@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 if ($this->session->userdata('level') == 'Penjaga') {
 	$site = "penjaga/";
 } else if ($this->session->userdata('level') == 'Admin') {
-	$site = "page/";
+	$site = "admin/";
 } else {
 	$site = "welcome/";
 }
@@ -12,33 +12,23 @@ if ($this->session->userdata('level') == 'Penjaga') {
 <html lang="en">
 
 <head>
-
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
+	<title>Loket <?php echo $instansi->instansi; ?></title>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/loket.css'); ?>">
+	<link rel="icon" type="icon" href="<?php echo base_url('media/' . $instansi->logo); ?>">
 
-	<title>Halaman Admin Antrian</title>
-
-	<!-- Custom fonts for this template-->
-	<link href="<?php echo base_url('assets/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-	<!-- Custom styles for this template-->
-
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/bootstrap.css') ?>">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/loket.css') ?>">
-
+	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js'); ?>"></script>
 </head>
-
 
 <body>
 	<header>
 		<div class="row">
 			<div class="col-md-2 col-sm-4 col-xs-4">
 				<div id="logo">
-					<img src="<?php echo base_url('media/' . $instansi->logo); ?>" class="img" onclick="window.location='<?php echo site_url($site); ?>'">
+					<img src="<?php echo base_url('media/' . $instansi->logo); ?>" width="50px" height="50px" class="img" onclick="window.location='<?php echo site_url($site); ?>'">
 				</div>
 			</div>
 			<div class="col-md-8">
@@ -50,3 +40,46 @@ if ($this->session->userdata('level') == 'Penjaga') {
 			</div>
 		</div>
 	</header>
+	<nav>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="menu">
+					<h3><?php $this->load->view($menu); ?></h3>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<section>
+		<div class="container">
+			<?php $this->load->view($content); ?>
+		</div>
+	</section>
+
+
+	<footer>
+		<div class="row">
+			<div class="col-md-8">
+				<marquee class="footer" onmouseover="stop();" onmouseout="start()">
+					<?php
+					foreach ($text_jalan as $text) { ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<img src="<?php echo base_url('media/agenda/' . $text->img); ?>" height="20">&nbsp;&nbsp;<?php echo $text->text;
+																											} ?>
+				</marquee>
+			</div>
+			<div class="col-md-4">
+				<?php
+				if (empty($this->session->userdata('level'))) { ?>
+					<a class="footer" href="<?php echo site_url('welcome/login/'); ?>">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo (ENVIRONMENT === 'development') ? '</strong>' : '' ?></a>
+					<a class="footer" href="<?php echo site_url('welcome/antrian/'); ?>">Nomer Antrian</a>
+				<?php } else { ?>
+					<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo (ENVIRONMENT === 'development') ? '</strong>' : '' ?></p>
+				<?php }
+				?>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>
