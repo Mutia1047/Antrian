@@ -53,10 +53,7 @@ if ($this->session->userdata('level') == 'Penjaga') {
             </p>
           </li>
           <li class="dropdown user-dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Hai, <?php echo $this->session->userdata('nama') ?><b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="<?php echo base_url('logout'); ?>"><i class="fa fa-power-off"></i> Log Out</a></li>
-            </ul>
+            <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Hai, <?php echo $this->session->userdata('nama') ?></a>
           </li>
         </ul>
       </div><!-- /.navbar-collapse -->
